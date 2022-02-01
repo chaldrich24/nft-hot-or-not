@@ -8,12 +8,24 @@ const nftSchema = new Schema(
       type: String,
       required: true
     },
+    creator: {
+      type: String,
+      required: true
+    },
+    owner: {
+      type: String,
+      required: true
+    },
     createdAt: {
       type: Date,
       default: Date.now,
       get: timestamp => dateFormat(timestamp)
     },
-    url: {
+    price: {
+      type: Number,
+      required: true
+    },
+    imageUrl: {
       type: String,
       required: true,
       unique: true
