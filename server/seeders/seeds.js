@@ -1,4 +1,4 @@
-const faker = require('faker');
+const {faker} = require('@faker-js/faker');
 
 const db = require('../config/connection');
 const { Nft, User } = require('../models');
@@ -31,7 +31,7 @@ db.once('open', async () => {
     const nftName = faker.lorem.words(Math.round(Math.random() * 20) + 1);
     const creator = faker.lorem.words(Math.round(Math.random() * 20) + 1);
     const owner = faker.lorem.words(Math.round(Math.random() * 20) + 1);
-    const imageUrl = 'https://lh3.googleusercontent.com/1YPUuosI4dyMZ2SFI5AUMXI8k_wIWggTn8Nu5o05dJl0waZM0psajYm21v_Xm_-IJTxmzA525b3zSM3ZzoYkNKvVfJu5Pw-1HcwnUQ=w600';
+    const imageUrl = i;
 
     const price = Math.random() * 50;
     const likes = Math.random() * 10;
@@ -43,7 +43,7 @@ db.once('open', async () => {
 
   // create comments
   for (let i = 0; i < 50; i += 1) {
-    const commentBody = faker.lorem.words(Math.round(Math.random() * 20) + 1);
+    const commentBody = faker.lorem.words(Math.round(Math.random() * 15) + 1);
 
     const randomUserIndex = Math.floor(Math.random() * createdUsers.ops.length);
     const { username } = createdUsers.ops[randomUserIndex];
