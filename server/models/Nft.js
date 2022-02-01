@@ -43,7 +43,7 @@ const nftSchema = new Schema(
   }
 );
 
-thoughtSchema.virtual('commentCount').get(function() {
+nftSchema.virtual('commentCount').get(function() {
   return this.comments.length;
 });
 
