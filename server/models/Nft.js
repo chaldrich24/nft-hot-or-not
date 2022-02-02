@@ -34,6 +34,10 @@ const nftSchema = new Schema(
       type: Number,
       required: true
     },
+    nonLikes: {
+      type: Number,
+      required: true
+    },
     comments: [commentSchema]
   },
   {
