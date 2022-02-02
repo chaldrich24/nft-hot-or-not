@@ -23,7 +23,11 @@ const resolvers = {
 
         nfts: async () => {
             return Nft.find()
-        }
+        },
+        users: async () => {
+          return User.find()
+
+        },
         
 },
 
