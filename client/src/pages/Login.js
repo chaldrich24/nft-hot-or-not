@@ -61,13 +61,14 @@ const Login = (props) => {
                   value={formState.password}
                   onChange={handleChange}
                 />
-
-
-              </form>
-
+                <br></br>
               <button  type='submit'>
                   Submit
                 </button>
+
+              </form>
+
+
                 <br></br>
                 <Link to="/signup">
                     Click Here to Create an Account

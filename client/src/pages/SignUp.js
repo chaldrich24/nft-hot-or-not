@@ -68,11 +68,12 @@ const handleFormSubmit = async event => {
                 value={formState.password}
                 onChange={handleChange}
               />
-
-            </form>
-            <button  type='submit'>
+              <br></br>
+              <button  type='submit'>
                 Submit
               </button>
+            </form>
+
             {error && <div>Sign up failed</div>}
           </div>
         </div>
