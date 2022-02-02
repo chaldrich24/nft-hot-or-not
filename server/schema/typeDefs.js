@@ -14,6 +14,7 @@ const typeDefs = gql`
         owner: String
         price: Float
         likes: Int
+        nonLikes: Int
         createdAt: String
         imageUrl: String
         comments: [Comment]
