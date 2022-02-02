@@ -120,8 +120,8 @@ db.once('open', async () => {
   let createdNfts = [];
   for (let i = 0; i < 20; i += 1) {
     const nftName = nfts[i].nftName;
-    const creator = faker.lorem.words(Math.round(Math.random() * 20) + 1);
-    const owner = faker.lorem.words(Math.round(Math.random() * 20) + 1);
+    const creator = faker.internet.userName();
+    const owner = faker.internet.userName();
     const imageUrl = nfts[i].imageUrl;
 
     const price = Math.random() * 50;
