@@ -73,6 +73,16 @@ nav a:hover {
   pointer-events: none;
 }
 
+.nft-link {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--span)
+}
+
+.nft-link:hover {
+  color: var(--main);
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

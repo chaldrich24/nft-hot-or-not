@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 function List({ nft }) {
-    return (
+  return (
+    <Link to={`/nft/${nft._id}`} className='nft-link'>
       <li className="item d-flex align-items-center justify-content-between leaderboard-row">
         <div className="item__avatar">
           <img
@@ -16,6 +18,7 @@ function List({ nft }) {
           <span className="item__score ms-5">Likes: {nft.likes}</span>
         </div>
       </li>
-    );
-  }
-  export default List;
+    </Link>
+  );
+}
+export default List;
