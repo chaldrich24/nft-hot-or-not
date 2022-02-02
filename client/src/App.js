@@ -10,6 +10,9 @@ import {
 import { setContext } from '@apollo/client/link/context';
 
 import Header from './components/Header';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Nft from './components/Nft';
+import Home from './pages/Home';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 
@@ -38,9 +41,12 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <div className="container">
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/signup" component={SignUp} />
+
+        <div>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/signup" component={SignUp} />
+
         </div>
       </div>
     </Router>
