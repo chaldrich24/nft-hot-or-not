@@ -8,6 +8,12 @@ const CommentForm = ({ nftId }) => {
 const [commentBody, setBody] = useState('');
 const [addComment, { error }] = useMutation(ADD_COMMENT);
 
+const handleChange = event => {
+  
+      setBody(event.target.value)
+
+  };
+
 const handleFormSubmit = async (event) => {
     event.preventDefault();
 
