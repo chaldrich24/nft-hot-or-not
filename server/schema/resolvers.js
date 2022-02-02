@@ -70,13 +70,15 @@ const resolvers = {
             },
 
         addLike: async (parent, { nftId }, context ) => {
+          if (context.user) {
           const updateLike = await Nft.findOneAndUpdate(
             { _id: nftId},
             { $inc: { likes: 1 }}
           )
           return updateLike;
         }
-        
+        throw new AuthenticationError('You need to be logged in!');
+      }
     }
 };
 
