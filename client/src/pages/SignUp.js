@@ -42,7 +42,7 @@ const handleFormSubmit = async event => {
           <div className='card-body'>
             <form onSubmit={handleFormSubmit}>
               <input
-                className='form-input'
+                className='form-input m-4 w-25 p-2 '
                 placeholder='Your username'
                 name='username'
                 type='username'
@@ -51,7 +51,7 @@ const handleFormSubmit = async event => {
                 onChange={handleChange}
               />
               <input
-                className='form-input'
+                className='form-input m-4 w-25 p-2'
                 placeholder='Your email'
                 name='email'
                 type='email'
@@ -60,7 +60,7 @@ const handleFormSubmit = async event => {
                 onChange={handleChange}
               />
               <input
-                className='form-input'
+                className='form-input m-4 w-25 p-2'
                 placeholder='******'
                 name='password'
                 type='password'
@@ -68,10 +68,11 @@ const handleFormSubmit = async event => {
                 value={formState.password}
                 onChange={handleChange}
               />
-              <button className='btn d-block w-100' type='submit'>
+
+            </form>
+            <button  type='submit'>
                 Submit
               </button>
-            </form>
             {error && <div>Sign up failed</div>}
           </div>
         </div>
