@@ -38,3 +38,10 @@ export const ADD_COMMENT = gql`
     }
   }
 `;
+
+export const ADD_LIKES = gql`
+mutation addLike($id: ID!) {
+  addLike(nftId: $id) {
+    _id
+  }
+}`;

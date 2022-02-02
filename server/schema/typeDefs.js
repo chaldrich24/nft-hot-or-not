@@ -33,12 +33,13 @@ const typeDefs = gql`
         me: User
         users: [User]
     }
+    
 
     type Mutation {
         login(email: String!, password: String!): Auth
         addUser(username: String!, email: String!, password: String!): Auth
         addComment(nftId: ID!, commentBody: String): Nft
-        addLike(nftId: ID!): Nft
+        addLike(nftId: ID!, likes: Int): Nft
         deleteComment(commentId: ID!): Nft
     }
 

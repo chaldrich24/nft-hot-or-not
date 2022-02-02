@@ -3,10 +3,17 @@ import Nft from '../components/Nft';
 import { useQuery } from '@apollo/client';
 import { QUERY_NFTS } from "../utils/queries";
 
+
+
+
+
 const Home = () => {
     const { loading, data } = useQuery(QUERY_NFTS);
     const nfts = data?.nfts || [];
     console.log(nfts);
+
+
+
 
     function getRandomPair() {
         const nftIndexes = [];
@@ -23,7 +30,11 @@ const Home = () => {
         return nftIndexes;
     }
 
+    
+
     const generatedIndexes = getRandomPair();
+
+    
 
     return (
         <main>
@@ -33,7 +44,7 @@ const Home = () => {
                     <div>Loading...</div>
                 ) : (
                     <div className="row">
-                        <div className="col">
+                        <div className="col" >
                             <Nft nft={nfts[generatedIndexes[0]]} />
                         </div>
                         <div className="col">
