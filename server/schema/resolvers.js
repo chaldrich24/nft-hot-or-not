@@ -22,7 +22,7 @@ const resolvers = {
         },
 
         nfts: async () => {
-            return Nft.find()
+            return Nft.find({}).sort({likes: -1});
         },
         users: async () => {
           return User.find()

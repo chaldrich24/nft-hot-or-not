@@ -7,6 +7,7 @@ export const QUERY_NFTS = gql`
             imageUrl
             price
             creator
+            likes
         }
     }
 `;
