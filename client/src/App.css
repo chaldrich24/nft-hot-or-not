@@ -1,3 +1,53 @@
+:root {
+  --main: #FE4A49;
+  --span: #2AB7CA;
+  --header: #242331;
+}
+
+body {
+  color: var(--header);
+}
+
+header {
+  background-color: var(--header);
+  margin: 0 0 100px 0;
+  padding: 20px 90px;
+}
+
+header h1 {
+  color: var(--main);
+  margin-bottom: 0;
+  font-size: 60px;
+  font-style: italic;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header span {
+  color: var(--span);
+}
+
+nav a {
+  color: var(--main);
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--span)
+}
+
+.nft h3 {
+  font-size: 17px;
+}
+
+.new-pair {
+  cursor: pointer;
+  color: var(--main);
+  font-weight: bold;
+}
+
 .App {
   text-align: center;
 }
