@@ -78,10 +78,37 @@ nav a:hover {
   color: #61dafb;
 }
 
+main {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  color: var(--main);
+  background-color: var(--main);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 15px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.card-header {
+  background-color: var(--main);
+  color: white;
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
