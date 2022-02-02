@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 
 const CommentList = ({ comments }) => {
     return (
-        <div className="card mb-3">
-        <div className="card-header">
+      <div className='list-card'>
+        <div className="card mb-3 w-50">
+        <div className="card-header ">
           <span className="text-light">Comments</span>
         </div>
         <div className="card-body">
@@ -12,12 +13,13 @@ const CommentList = ({ comments }) => {
             comments.map(comment => (
               <p className="pill mb-3" key={comment._id}>
                 {comment.commentBody} {'// '}
-                <Link to={`/profile/${comment.username}`} style={{ fontWeight: 700 }}>
+               
                   {comment.username} on {comment.createdAt}
-                </Link>
+            
               </p>
             ))}
         </div>
+      </div>
       </div>
     
     );
