@@ -24,3 +24,17 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const ADD_COMMENT = gql`
+  mutation addComment($nftId: ID!, $commentBody: String!) {
+    addComment(nftId: $nftId, commentBody: $commentBody) {
+      _id
+      comments {
+        _id
+        commentBody
+        createdAt
+        username
+      }
+    }
+  }
+`;

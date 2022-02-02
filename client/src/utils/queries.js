@@ -14,14 +14,21 @@ export const QUERY_NFTS = gql`
 `;
 
 export const QUERY_NFT = gql`
-    query nft($id: ID!) {
-        nft (_id: $id) {
-            nftName
-            imageUrl
-            price
-            creator
-            likes
-            owner
-        }
+  query nft($id: ID!) {
+    nft(_id: $id) {
+      _id
+      nftName
+      imageUrl
+      price
+      creator
+      owner
+      comments {
+        _id
+        createdAt
+        username
+        commentBody
+      }
     }
-`
+  }
+`;
+
