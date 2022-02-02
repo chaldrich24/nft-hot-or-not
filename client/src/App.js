@@ -11,10 +11,11 @@ import { setContext } from '@apollo/client/link/context';
 
 import Header from './components/Header';
 import Nft from './components/Nft';
+import SingleNft from './pages/SingleNft';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
-//import Leaderboard from './pages/Leaderboard'
+import Leaderboard from './pages/Leaderboard';
 import Footer from './components/Footer';
 
 const httpLink = createHttpLink({
@@ -47,7 +48,8 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={SignUp} />
-          
+          <Route exact path="/leaderboard" component={Leaderboard} />
+          <Route exact path="/nft/:id" component={SingleNft} />
 
         </div>
         <Footer />

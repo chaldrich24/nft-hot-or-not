@@ -38,6 +38,22 @@ nav a:hover {
   color: var(--span)
 }
 
+
+.leaderboard-row {
+  margin-bottom: 20px;
+  padding: 0 30px 20px 30px;
+  border-bottom: 2px solid var(--main);
+}
+
+.item-container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.item__name {
+  font-size: 25px;
+}
+
 .nft h3 {
   font-size: 17px;
 }
@@ -55,6 +71,16 @@ nav a:hover {
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.nft-link {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--span)
+}
+
+.nft-link:hover {
+  color: var(--main);
 }
 
 @media (prefers-reduced-motion: no-preference) {
