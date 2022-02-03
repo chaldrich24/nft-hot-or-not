@@ -96,7 +96,7 @@ nav a:hover {
 
 .prog {
   height: 20px;
-  width: 10%;
+  width: 50%;
   background-color: var(--main);
   border: 2px solid var(--header);
   margin: 0 auto;
