@@ -45,3 +45,13 @@ mutation addLike($id: ID!) {
     _id
   }
 }`;
+
+export const ADD_NONLIKE = gql`
+  mutation addNonLike($id: ID!) {
+    addNonLike(nftId: $id) {
+      _id
+      likes
+      nonLikes
+    }
+  }
+`

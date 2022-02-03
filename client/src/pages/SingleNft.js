@@ -6,6 +6,7 @@ import { QUERY_NFT } from '../utils/queries';
 import CommentList from '../components/CommentList';
 import CommentForm from '../components/CommentForm';
 import Auth from '../utils/auth';
+import roundPrice from '../utils/roundPrice';
 
 const SingleNft = props => {
     const { id: nftId } = useParams();
@@ -15,19 +16,26 @@ const SingleNft = props => {
     });
 
     const nft = data?.nft || {};
-    console.log(nft)
+    
+    const nftPercentLike = (nft.likes / (nft.likes + nft.nonLikes)) * 100;
+    console.log(roundPrice(nftPercentLike))
 
     if (loading) {
         return <div>Loading...</div>;
     }
-
+    
     return (
         <div>
-        <main>
-            <Nft nft={nft}/>
-        </main>
-        <CommentList comments={nft.comments} />
-        {Auth.loggedIn() && <CommentForm nftId={nft._id} />}
+            <main className='d-flex flex-column mb-5'>
+                <Nft nft={nft} />
+                <div className='prog' >
+                    <div className='prog-likes' style={{width: `${roundPrice(nftPercentLike)}%`}}></div>
+                </div>
+                <p>{roundPrice(nftPercentLike)}% of people like this NFT over others</p>
+                
+            </main>
+            <CommentList comments={nft.comments} />
+            {Auth.loggedIn() && <CommentForm nftId={nft._id} />}
         </div>
     )
 }
