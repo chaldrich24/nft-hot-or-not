@@ -38,7 +38,6 @@ nav a:hover {
   color: var(--span)
 }
 
-
 .leaderboard-row {
   margin-bottom: 20px;
   padding: 0 30px 20px 30px;
@@ -54,10 +53,6 @@ nav a:hover {
   font-size: 25px;
 }
 
-.nft h3 {
-  font-size: 17px;
-}
-
 .new-pair {
   cursor: pointer;
   color: #fff;
@@ -68,6 +63,10 @@ nav a:hover {
   border-radius: 10px;
   width: 40%;
   margin: 0 auto;
+}
+
+.new-pair:hover {
+  background-color: var(--span)
 }
 
 .App {
@@ -82,11 +81,15 @@ nav a:hover {
 .nft-link {
   cursor: pointer;
   text-decoration: none;
-  color: var(--span)
+  color: var(--main)
 }
 
 .nft-link:hover {
-  color: var(--main);
+  color: var(--span);
+}
+
+.nft h3 {
+  font-size: 17px;
 }
 
 .nft img {
@@ -107,12 +110,6 @@ nav a:hover {
   height: 16px;
   background-color: var(--span);
   position: absolute
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -154,15 +151,48 @@ footer {
   margin-top: 100px;
 }
 
+.card-comment {
+  width: 70%;
+}
+
 .card-header {
   background-color: var(--main);
   color: white;
 }
 
+.indiv-comment {
+  border-bottom: 2px solid rgb(218, 214, 214);
+  text-align: start;
+}
+
+.comment-date {
+  font-size: 15px;
+  color: rgb(128, 128, 128);
+}
+
+.create-account {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--main);
+}
+
+.create-account:hover {
+  color: var(--span);
+}
+
+.card-body button:hover {
+  background-color: var(--span);
+}
 
 .list-card {
   display: flex;
   justify-content: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
 @keyframes App-logo-spin {
