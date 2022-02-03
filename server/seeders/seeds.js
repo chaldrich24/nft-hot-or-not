@@ -352,7 +352,7 @@ db.once('open', async () => {
 
   // create nfts
   let createdNfts = [];
-  for (let i = 0; i < 20; i += 1) {
+  for (let i = 0; i < nfts.length; i += 1) {
     const nftName = nfts[i].nftName;
     const creator = faker.internet.userName();
     const owner = faker.internet.userName();
