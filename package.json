@@ -23,5 +23,8 @@
   "homepage": "https://github.com/chaldrich24/nfteez#readme",
   "devDependencies": {
     "concurrently": "^7.0.0"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^6.0.0-alpha.5"
   }
 }

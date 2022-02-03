@@ -1,7 +1,8 @@
-const { faker } = require('@faker-js/faker');
-
 const db = require('../config/connection');
 const { Nft, User } = require('../models');
+const userDataArray = require('./mockUserData');
+const commentData = require('./mockCommentData');
+const nftOwnerCreator = require('./mockNftOwnerCreator');
 
 const nfts = [
   {
@@ -340,10 +341,10 @@ db.once('open', async () => {
   // create user data
   const userData = [];
 
-  for (let i = 0; i < 50; i += 1) {
-    const username = faker.internet.userName();
-    const email = faker.internet.email(username);
-    const password = faker.internet.password();
+  for (let i = 0; i < userDataArray.length; i += 1) {
+    const username = userDataArray[i].username;
+    const email = userDataArray[i].email;
+    const password = userDataArray[i].password;
 
     userData.push({ username, email, password });
   }
@@ -354,8 +355,8 @@ db.once('open', async () => {
   let createdNfts = [];
   for (let i = 0; i < nfts.length; i += 1) {
     const nftName = nfts[i].nftName;
-    const creator = faker.internet.userName();
-    const owner = faker.internet.userName();
+    const creator = nftOwnerCreator[i].creator;
+    const owner = nftOwnerCreator[i].owner;
     const imageUrl = nfts[i].imageUrl;
 
     const price = Math.random() * 50;
@@ -369,7 +370,7 @@ db.once('open', async () => {
 
   // create comments
   for (let i = 0; i < 50; i += 1) {
-    const commentBody = faker.lorem.words(Math.round(Math.random() * 15) + 1);
+    const commentBody = commentData[i].commentBody;
 
     const randomUserIndex = Math.floor(Math.random() * createdUsers.ops.length);
     const { username } = createdUsers.ops[randomUserIndex];
