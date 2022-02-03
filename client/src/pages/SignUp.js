@@ -43,7 +43,7 @@ const handleFormSubmit = async event => {
             <form onSubmit={handleFormSubmit}>
               <input
                 className='form-input m-4 w-25 p-2 '
-                placeholder='Your username'
+                placeholder='Username'
                 name='username'
                 type='username'
                 id='username'
@@ -52,7 +52,7 @@ const handleFormSubmit = async event => {
               />
               <input
                 className='form-input m-4 w-25 p-2'
-                placeholder='Your email'
+                placeholder='Email'
                 name='email'
                 type='email'
                 id='email'
@@ -61,7 +61,7 @@ const handleFormSubmit = async event => {
               />
               <input
                 className='form-input m-4 w-25 p-2'
-                placeholder='******'
+                placeholder='*********'
                 name='password'
                 type='password'
                 id='password'

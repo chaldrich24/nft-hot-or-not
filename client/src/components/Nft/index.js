@@ -2,14 +2,20 @@ import React from 'react';
 import roundPrice from '../../utils/roundPrice';
 import { useMutation } from '@apollo/client';
 import { ADD_LIKES, ADD_NONLIKE } from "../../utils/mutations";
+import Auth from '../../utils/auth';
+import { withRouter } from 'react-router-dom';
 
-function Nft({ nft, otherNftId }) {
+function Nft({ nft, otherNftId, history }) {
   const [addLikes, { error }] = useMutation(ADD_LIKES);
   const [addNonLike, { errorNon }] = useMutation(ADD_NONLIKE);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     console.log(otherNftId);
+
+    if (!Auth.getToken()) {
+      history.push('/login');
+    }
 
     try {
       await addLikes({
@@ -37,4 +43,4 @@ function Nft({ nft, otherNftId }) {
   )
 }
 
-export default Nft;
+export default withRouter(Nft);
