@@ -40,6 +40,7 @@ const typeDefs = gql`
         addUser(username: String!, email: String!, password: String!): Auth
         addComment(nftId: ID!, commentBody: String): Nft
         addLike(nftId: ID!, likes: Int): Nft
+        addNonLike(nftId: ID!): Nft
         deleteComment(commentId: ID!): Nft
     }
 

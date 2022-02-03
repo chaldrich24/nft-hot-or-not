@@ -9,6 +9,7 @@ export const QUERY_NFTS = gql`
             price
             creator
             likes
+            nonLikes
         }
     }
 `;
@@ -22,6 +23,8 @@ export const QUERY_NFT = gql`
       price
       creator
       owner
+      likes
+      nonLikes
       comments {
         _id
         createdAt

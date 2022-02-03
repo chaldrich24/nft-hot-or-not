@@ -42,7 +42,7 @@ nav a:hover {
 .leaderboard-row {
   margin-bottom: 20px;
   padding: 0 30px 20px 30px;
-  border-bottom: 2px solid var(--main);
+  border-bottom: 2px solid rgb(219, 219, 219);
 }
 
 .item-container {
@@ -60,8 +60,14 @@ nav a:hover {
 
 .new-pair {
   cursor: pointer;
-  color: var(--main);
+  color: #fff;
   font-weight: bold;
+  background-color: var(--main);
+  padding: 5px;
+  border: 2px solid var(--header);
+  border-radius: 10px;
+  width: 40%;
+  margin: 0 auto;
 }
 
 .App {
@@ -81,6 +87,26 @@ nav a:hover {
 
 .nft-link:hover {
   color: var(--main);
+}
+
+.nft img {
+  cursor: pointer;
+  border: 3px solid var(--header);
+}
+
+.prog {
+  height: 20px;
+  width: 10%;
+  background-color: var(--main);
+  border: 2px solid var(--header);
+  margin: 0 auto;
+  position: relative;
+}
+
+.prog-likes {
+  height: 16px;
+  background-color: var(--span);
+  position: absolute
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -122,6 +148,10 @@ button {
   margin: 15px 2px;
   cursor: pointer;
   border-radius: 4px;
+}
+
+footer {
+  margin-top: 100px;
 }
 
 .card-header {
