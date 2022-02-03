@@ -1,7 +1,6 @@
 import { useQuery } from '@apollo/client';
 import React from 'react';
 import { useParams } from 'react-router';
-import Nft from '../components/Nft';
 import { QUERY_NFT } from '../utils/queries';
 import CommentList from '../components/CommentList';
 import CommentForm from '../components/CommentForm';
@@ -30,7 +29,10 @@ const SingleNft = props => {
 
                 <div>
                     <img src={nft.imageUrl} height={300}></img>
-                    <p> <i className='fab fa-ethereum'></i>{roundPrice(nft.price)}</p>
+                    <div className='d-flex justify-content-center align-items-center'>
+                        <img src={require('../images/ethereum-eth-logo.png')} className='eth' height='20px'></img>
+                        <p className='price-num'>{roundPrice(nft.price)} </p>
+                    </div>
                 </div>
                 <div className='d-flex flex-column justify-content-center ms-5'>
                     <h2>{nft.nftName}</h2>
@@ -45,8 +47,6 @@ const SingleNft = props => {
                     </div>
                     <p>{roundPrice(nftPercentLike)}% of people like this NFT over others</p>
                 </div>
-
-                {/* <Nft nft={nft} /> */}
 
             </main>
             <CommentList comments={nft.comments} />

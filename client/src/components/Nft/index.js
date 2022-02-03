@@ -36,7 +36,10 @@ function Nft({ nft, otherNftId, history }) {
   return (
     <div className='nft'>
       <img onClick={handleFormSubmit} src={nft.imageUrl} height={300}></img>
-      <p><i className='fab fa-ethereum'></i>{roundPrice(nft.price)} </p>
+      <div className='d-flex justify-content-center align-items-center'>
+        <img src={require('../../images/ethereum-eth-logo.png')} className='eth' height='20px'></img>
+        <p className='price-num'>{roundPrice(nft.price)} </p>
+      </div>
       <h2>{nft.nftName}</h2>
       <h3>created by {nft.creator}</h3>
     </div>
