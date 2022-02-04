@@ -1,13 +1,4 @@
 # nfteez
-
-# Table of Contents
-     [Description](#description)
-     [Installation](#installation)
-     [Usage](#usage)
-     [License](#license)
-     [Contribution](#contribution)
-     [Tests](#tests)
-     [Questions](#questions)
     
 # Link
 https://radiant-springs-59444.herokuapp.com/
